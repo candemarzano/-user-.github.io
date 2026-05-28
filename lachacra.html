@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Viaje La Chacra</title>
+
+	<link rel="stylesheet" type="text/css" href="decoviaje.css">
+</head>
+
+<body>
+
+	<center class="contenedor">
+
+		<a href="viaje.html" onclick="cambiarPagina('viaje.html')">
+			<img src="aaaa.png" class="volver">
+		</a>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Viaje de estudios
+		</h6>
+
+		<h1 style="font-family: georgia, sans-serif;" class="texto">
+			La Chacra: Los Retamos
+		</h1>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Elias Ambrozy, Simon Ambrosi, Efrain Lafuente, Carlo Mottino, Candelaria Marzano
+		</h6>
+
+		<h4>
+			En nuestra visita a la chacra Los Retamos fuimos guiados por una empleada y dueña,
+			ya que trabajaba en la chacra y es parte de la familia dueña.
+			Nos fue enseñando todos los cultivos y plantaciones que tienen en el terreno.
+			Nos contó que su producto estrella es la frambuesa y tienen alfajores y mermeladas de ella.
+			Por último nos dejaron probar el alfajor de frambuesa y chocolate y tuvimos la posibilidad
+			de comprar sus productos.
+		</h4>
+
+		<h4>¿que se produce?: Productos con las frutas finas</h4> <br>
+		<br>
+		<h4>¿cual es el proceso?: 	-Preparar la tierra<br>
+									-Sembrar<br>
+									-Cuidar las plantas<br>
+									-Cosechar<br>
+									-Clasificar y vender</h4><br>
+		<br>
+		<h4>¿quienes participan?: 	-Productores y dueños<br>
+									-Trabajadores<br>
+									-Clientes y turistas<br>
+									-Transportistas y vendedores<br>
+		</h4>
+		<img src="lachacra1.JPEG" class="imagen">
+		<img src="lachacra2.JPEG" class="imagen">
+
+
+
+	</center>
+
+	<script>
+		function cambiarPagina(url) {
+
+			document.body.classList.add("fade-out");
+
+			const clickSound = document.getElementById("clickSound");
+
+			clickSound.currentTime = 0;
+			clickSound.play();
+
+			setTimeout(() => {
+				window.location.href = url;
+			}, 300);
+		}
+	</script>
+
+	<audio id="clickSound" src="click.mp3"></audio>
+
+</body>
+</html>
