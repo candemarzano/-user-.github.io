@@ -1,0 +1,107 @@
+body {
+	background-color: #819c90;
+
+	opacity: 0;
+	transform: scale(1.05);
+	animation: aparecer 0.4s forwards;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100vh;
+	margin: 0;
+}
+
+@keyframes aparecer {
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.botones {
+	width: 180px;
+	height: 60px;
+
+	border-radius: 10px;
+
+	transition: transform 0.25s ease;
+
+	border: 0px solid #576a62;
+
+	display: inline-block;
+
+	margin: 5px;
+}
+
+.botones:hover {
+	transform: scale(1.15);
+}
+
+.texto {
+	color: white;
+}
+
+.imagen {
+	width: 20%;
+
+	aspect-ratio: 1 / 1;
+
+	margin: 20px;
+
+	display: inline-block;
+
+	transition: transform 0.2s ease;
+
+	border-radius: 15px;
+}
+
+.imagen:hover {
+	transform: scale(1.15);
+}
+
+.volver {
+	width: 99px;
+	height: 33px;
+
+	border-radius: 5.5px;
+
+	transition: transform 0.2s ease;
+
+	border: 0px solid black;
+}
+
+.volver:hover {
+	transform: scale(1.08);
+}
+
+.fade-out {
+	opacity: 0;
+	transform: scale(0.95);
+
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.contenedor {
+	padding: 15px;
+
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 20px;
+
+	background: rgba(255,255,255,0.08);
+
+	backdrop-filter: blur(4px);
+
+	display: inline-block;
+
+	max-width: 90%;
+}
+
+h4 {
+	color: white;
+
+	font-family: georgia, sans-serif;
+
+	padding: 10px;
+}

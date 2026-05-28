@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Viaje Menú</title>
+
+	<link rel="stylesheet" type="text/css" href="decoviaje.css">
+</head>
+
+<body>
+
+	<center class="contenedor">
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Viaje de estudios
+		</h6>
+
+		<h1 style="font-family: georgia, sans-serif;" class="texto">
+			Menú
+		</h1>
+
+		<h4>Salimos de la terminal de colectivo de comodoro rivadavia, en un periodo de 12 horas llegamos a El Bolson,<br> ese mismo dia fuimos a La Chacra primero y a La Alazana, al dia siguiente fuimos a La turbera</h4>
+
+		<a href="lachacra.html">
+			<img src="coso1.png" class="botones">
+		</a>
+
+		<a href="laalazana.html">
+			<img src="coso2.png" class="botones">
+		</a>
+
+		<a href="laturbera.html">
+			<img src="coso3.png" class="botones">
+		</a>
+
+		<br>
+
+		<a href="elbolson.html">
+			<img src="coso4.png" class="botones">
+		</a>
+
+		<a href="laberinto.html">
+			<img src="coso5.png" class="botones">
+		</a>
+
+		<a href="caminata.html">
+			<img src="coso6.png" class="botones">
+		</a>
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Elias Ambrozy, Simon Ambrosi, Efrain Lafuente, Carlo Mottino, Candelaria Marzano
+		</h6>
+	</center>
+
+	<audio id="clickSound" src="click.mp3"></audio>
+ 
+	<script>
+		const sound = document.getElementById("clickSound");
+
+		document.querySelectorAll("a").forEach(link => {
+
+			link.addEventListener("click", function(e) {
+
+				const url = this.getAttribute("href");
+
+				if (!url || url === "#" || url.startsWith("#")) return;
+
+				e.preventDefault();
+
+				sound.currentTime = 0;
+				sound.play();
+
+				document.body.classList.add("fade-out");
+
+				setTimeout(() => {
+					window.location.href = url;
+				}, 300);
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Viaje La Alazana</title>
+
+	<link rel="stylesheet" type="text/css" href="decoviaje.css">
+</head>
+
+<body>
+
+	<center class="contenedor">
+
+		<a href="viaje.html" onclick="cambiarPagina('viaje.html')">
+			<img src="aaaa.png" class="volver">
+		</a>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Viaje de estudios
+		</h6>
+
+		<h1 style="font-family: georgia, sans-serif;" class="texto">
+			La Alazana: Destilería
+		</h1>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Elias Ambrozy, Simon Ambrosi, Efrain Lafuente, Carlo Mottino, Candelaria Marzano
+		</h6>
+
+		<h4>
+			En la destilería La Alazana nos dieron un recorrido por distintos sectores
+			en los cuales producían el whisky, lo fermentaban y lo almacenaban.
+			En las primeras dos habitaciones había máquinas y en la última solo barriles
+			de madera con whisky que podía llegar a los 100 años.
+			Luego nos sacamos una foto en el parque de atrás con sus hermosas vistas.
+		</h4><br>
+		<h4>¿que se produce?: Bebidas destiladas y licores artesanales</h4> <br>
+		<br>
+		<h4>¿cual es el proceso?: 	-Selección de frutas e ingredientes<br>
+									-Preparación y fermentación<br>
+									-Destilación<br>
+									-Envasado y etiquetado<br>
+									-Venta y distribución<br>
+
+		<br>
+		<h4>¿quienes participan?: 	-Productores y dueños <br>
+									-Trabajadores <br>
+									-Clientes y turistas.<br>
+									-Transportistas y vendedores.<br>
+									-Proveedores
+		</h4>
+
+		<img src="alazana1.JPEG" class="imagen">
+		<img src="alazana2.JPEG" class="imagen">
+
+	</center>
+
+	<script>
+		function cambiarPagina(url) {
+
+			document.body.classList.add("fade-out");
+
+			const clickSound = document.getElementById("clickSound");
+
+			clickSound.currentTime = 0;
+			clickSound.play();
+
+			setTimeout(() => {
+				window.location.href = url;
+			}, 300);
+		}
+	</script>
+
+	<audio id="clickSound" src="click.mp3"></audio>
+
+</body>
+</html>
