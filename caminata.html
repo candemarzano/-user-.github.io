@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Viaje Caminata</title>
+
+	<link rel="stylesheet" type="text/css" href="decoviaje.css">
+</head>
+
+<body>
+
+	<center class="contenedor">
+
+		<a href="viaje.html" onclick="cambiarPagina('viaje.html')">
+			<img src="aaaa.png" class="volver">
+		</a>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Viaje de estudios
+		</h6>
+
+		<h1 style="font-family: georgia, sans-serif;" class="texto">
+			Caminata
+		</h1>
+
+		<h6 style="font-family: georgia, sans-serif;" class="texto">
+			Elias Ambrozy, Simon Ambrosi, Efrain Lafuente, Carlo Mottino, Candelaria Marzano
+		</h6>
+
+		<h4>
+			En la caminata de la Cascada Escondida fuimos acompañados por los profesores
+			y por el guía Guido. Él nos fue contando la historia de la caminata y cómo
+			fue construida por un grupo de personas de El Bolsón.
+			Cuando terminamos el recorrido nos sacamos fotos con la cascada de fondo.
+		</h4>
+
+		<img src="caminata1.JPEG" class="imagen">
+		<img src="caminata2.JPEG" class="imagen">
+		<img src="caminata3.JPEG" class="imagen">
+
+		<br>
+
+		<img src="caminata4.JPEG" class="imagen">
+		<img src="caminata5.JPEG" class="imagen">
+
+	</center>
+
+	<script>
+		function cambiarPagina(url) {
+
+			document.body.classList.add("fade-out");
+
+			const clickSound = document.getElementById("clickSound");
+
+			clickSound.currentTime = 0;
+			clickSound.play();
+
+			setTimeout(() => {
+				window.location.href = url;
+			}, 300);
+		}
+	</script>
+
+	<audio id="clickSound" src="click.mp3"></audio>
+
+</body>
+</html>
